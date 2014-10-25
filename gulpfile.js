@@ -14,7 +14,7 @@ gulp.task('build', function(){
        .pipe(ngAnnotate())
        .pipe(concat('main.js'))
        .pipe(uglify())
-       .pipe(sourcemaps.write())
+       .pipe(sourcemaps.write('dist/'))
        .pipe(gulp.dest('dist'));
 });
 
