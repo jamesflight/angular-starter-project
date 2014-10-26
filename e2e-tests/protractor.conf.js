@@ -9,7 +9,7 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  baseUrl: 'http://localhost:8080/',
+  baseUrl: 'http://juliemr.github.io',
 
   framework: 'jasmine',
 

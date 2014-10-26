@@ -2,41 +2,57 @@
 
 /* https://github.com/angular/protractor/blob/master/docs/toc.md */
 
-describe('my app', function() {
+describe('angularjs homepage', function() {
 
-  browser.get('index.html');
+    var firstNumber = element(by.model('first'));
+    var secondNumber = element(by.model('second'));
+    var goButton = element(by.id('gobutton'));
+    var latestResult = element(by.binding('latest'));
+    var history = element.all(by.repeater('result in memory'));
 
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
-  });
-
-
-  describe('view1', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#/view1');
-    });
-
-
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
-    });
-
-  });
-
-
-  describe('view2', function() {
+    function add(a, b) {
+        firstNumber.sendKeys(a);
+        secondNumber.sendKeys(b);
+        goButton.click();
+    }
 
     beforeEach(function() {
-      browser.get('index.html#/view2');
+        browser.get('http://juliemr.github.io/protractor-demo/');
     });
 
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
+    it('should have a title', function() {
+        expect(browser.getTitle()).toEqual('Super Calculator');
     });
 
-  });
+    it('should add one and two', function() {
+        add(1, 2);
+
+        expect(latestResult.getText()).toEqual('3');
+    });
+
+    it('should add four and six', function() {
+        add(4, 6);
+
+        expect(latestResult.getText()).toEqual('10');
+    });
+
+    it('should have a history', function() {
+        add(1, 2);
+        add(3, 4);
+
+        expect(history.count()).toEqual(2);
+
+        add(5, 6);
+
+        expect(history.count()).toEqual(3);
+    });
+
+    it('should have a history', function() {
+        add(1, 2);
+        add(3, 4);
+
+        expect(history.last().getText()).toContain('1 + 2');
+        expect(history.first().getText()).toContain('3 + 4');
+    });
+
 });
