@@ -1,26 +1,87 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'uninstall', '-g', 'http-server' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'ng-html-2-js' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
-4 verbose lib/node_modules/http-server unbuild
-5 info preuninstall http-server@0.7.2
-6 info uninstall http-server@0.7.2
-7 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild http-server@0.7.2
-8 verbose /usr/local/bin,[object Object] binRoot
-9 info postuninstall http-server@0.7.2
-10 error Error: EACCES, unlink '/usr/local/lib/node_modules/http-server'
-10 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/http-server']
-10 error   errno: 3,
-10 error   code: 'EACCES',
-10 error   path: '/usr/local/lib/node_modules/http-server' }
-11 error Please try running this command again as root/Administrator.
-12 error System Darwin 13.3.0
-13 error command "node" "/usr/local/bin/npm" "uninstall" "-g" "http-server"
-14 error cwd /Users/jamesflight/PhpstormProjects/base-angular
-15 error node -v v0.10.32
-16 error npm -v 1.4.28
-17 error path /usr/local/lib/node_modules/http-server
-18 error code EACCES
-19 error errno 3
-20 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/http-server'
-21 verbose exit [ 3, true ]
+4 warn package.json base-angular@1.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'ng-html-2-js', null ]
+7 verbose cache add name=undefined spec="ng-html-2-js" args=["ng-html-2-js",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'ng-html-2-js',
+8 verbose parsed url   path: 'ng-html-2-js',
+8 verbose parsed url   href: 'ng-html-2-js' }
+9 silly lockFile a1603178-ng-html-2-js ng-html-2-js
+10 verbose lock ng-html-2-js /Users/jamesflight/.npm/a1603178-ng-html-2-js.lock
+11 silly lockFile a1603178-ng-html-2-js ng-html-2-js
+12 silly lockFile a1603178-ng-html-2-js ng-html-2-js
+13 verbose addNamed [ 'ng-html-2-js', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile d4fe4e99-ng-html-2-js ng-html-2-js@
+16 verbose lock ng-html-2-js@ /Users/jamesflight/.npm/d4fe4e99-ng-html-2-js.lock
+17 silly addNameRange { name: 'ng-html-2-js', range: '*', hasData: false }
+18 verbose request where is /ng-html-2-js
+19 verbose request registry https://registry.npmjs.org/
+20 verbose request id 3c253072dae9fab6
+21 verbose url raw /ng-html-2-js
+22 verbose url resolving [ 'https://registry.npmjs.org/', './ng-html-2-js' ]
+23 verbose url resolved https://registry.npmjs.org/ng-html-2-js
+24 verbose request where is https://registry.npmjs.org/ng-html-2-js
+25 info trying registry request attempt 1 at 11:21:15
+26 http GET https://registry.npmjs.org/ng-html-2-js
+27 http 404 https://registry.npmjs.org/ng-html-2-js
+28 verbose headers { date: 'Sun, 26 Oct 2014 11:21:15 GMT',
+28 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 verbose headers   'content-type': 'application/json',
+28 verbose headers   'cache-control': 'max-age=0',
+28 verbose headers   'content-length': '52',
+28 verbose headers   'accept-ranges': 'bytes',
+28 verbose headers   via: '1.1 varnish',
+28 verbose headers   age: '0',
+28 verbose headers   'x-served-by': 'cache-lcy1131-LCY',
+28 verbose headers   'x-cache': 'MISS',
+28 verbose headers   'x-cache-hits': '0',
+28 verbose headers   'x-timer': 'S1414322475.229807,VS0,VE85',
+28 verbose headers   'keep-alive': 'timeout=10, max=50',
+28 verbose headers   connection: 'Keep-Alive' }
+29 silly registry.get cb [ 404,
+29 silly registry.get   { date: 'Sun, 26 Oct 2014 11:21:15 GMT',
+29 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'cache-control': 'max-age=0',
+29 silly registry.get     'content-length': '52',
+29 silly registry.get     'accept-ranges': 'bytes',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     age: '0',
+29 silly registry.get     'x-served-by': 'cache-lcy1131-LCY',
+29 silly registry.get     'x-cache': 'MISS',
+29 silly registry.get     'x-cache-hits': '0',
+29 silly registry.get     'x-timer': 'S1414322475.229807,VS0,VE85',
+29 silly registry.get     'keep-alive': 'timeout=10, max=50',
+29 silly registry.get     connection: 'Keep-Alive' } ]
+30 silly lockFile d4fe4e99-ng-html-2-js ng-html-2-js@
+31 silly lockFile d4fe4e99-ng-html-2-js ng-html-2-js@
+32 error 404 404 Not Found: ng-html-2-js
+32 error 404
+32 error 404 'ng-html-2-js' is not in the npm registry.
+32 error 404 You should bug the author to publish it
+32 error 404 It was specified as a dependency of 'base-angular'
+32 error 404
+32 error 404 Maybe try 'npm search ng html 2'
+32 error 404
+32 error 404 Note that you can also install from a
+32 error 404 tarball, folder, or http url, or git url.
+33 error System Darwin 13.3.0
+34 error command "node" "/usr/local/bin/npm" "install" "ng-html-2-js"
+35 error cwd /Users/jamesflight/PhpstormProjects/base-angular
+36 error node -v v0.10.32
+37 error npm -v 1.4.28
+38 error code E404
+39 verbose exit [ 1, true ]
